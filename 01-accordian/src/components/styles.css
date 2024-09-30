@@ -1,0 +1,48 @@
+/* Contenedor principal del acordeón, que centra el contenido tanto horizontal como verticalmente */
+.acc-wrapper {
+  display: flex; /* Usamos Flexbox para organizar los elementos */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilos del botón para habilitar/deshabilitar la selección múltiple */
+.acc-wrapper button {
+  padding: 10px 20px; /* Relleno interno del botón */
+  background: #614101; /* Fondo marrón oscuro */
+  color: #fff; /* Texto blanco */
+  font-weight: bold; /* Negrita para el texto */
+  font-size: 20px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor a "puntero" cuando se pasa sobre el botón */
+}
+
+/* Contenedor del acordeón */
+.accordian {
+  width: 500px; /* Ancho fijo del acordeón */
+}
+
+/* Cada ítem individual dentro del acordeón */
+.item {
+  background: #614101; /* Fondo marrón oscuro para los ítems */
+  margin-bottom: 10px; /* Espacio inferior entre los ítems */
+  padding: 10px 20px; /* Relleno interno de los ítems */
+}
+
+/* Estilo para el título de cada ítem (la pregunta) */
+.title {
+  color: #ffffff; /* Texto en blanco */
+  display: flex; /* Flexbox para alinear elementos dentro del título */
+  justify-content: space-between; /* Espacio entre el texto del título y el símbolo de expansión */
+  align-items: center; /* Centra verticalmente el contenido */
+  cursor: pointer; /* Cambia el cursor a "puntero" cuando se pasa sobre el título */
+}
+
+/* Estilo para el contenido de cada ítem (la respuesta) */
+.acc-content {
+  color: #ffffff; /* Texto en blanco */
+  height: auto; /* Altura ajustada automáticamente según el contenido */
+  padding-bottom: 20px; /* Espacio inferior para que el contenido no quede pegado al borde */
+}
