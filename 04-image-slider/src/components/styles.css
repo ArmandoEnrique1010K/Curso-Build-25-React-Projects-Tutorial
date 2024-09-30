@@ -1,0 +1,56 @@
+.container {
+  position: relative; /* Posición relativa para que los elementos hijos se posicionen absolutamente respecto a este contenedor */
+  display: flex; /* Usamos flexbox para alinear los elementos dentro del contenedor */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  width: 600px; /* Ancho fijo del slider */
+  height: 450px; /* Altura fija del slider */
+}
+
+.current-image {
+  border-radius: 0.5rem; /* Bordes redondeados para las imágenes actuales */
+  box-shadow: 0px 0px 7px #666; /* Sombra para dar un efecto de profundidad */
+  width: 100%; /* Imagen ocupa el 100% del ancho del contenedor */
+  height: 100%; /* Imagen ocupa el 100% de la altura del contenedor */
+}
+
+.arrow {
+  position: absolute; /* Posición absoluta para que las flechas se ubiquen sobre el contenedor */
+  width: 2rem; /* Tamaño de las flechas */
+  height: 2rem; /* Tamaño de las flechas */
+  color: #fff; /* Color blanco para las flechas */
+  filter: drop-shadow(0px 0px 5px #555); /* Sombra para las flechas */
+}
+
+.arrow-left {
+  left: 1rem; /* Posiciona la flecha izquierda a la izquierda del contenedor */
+}
+
+.arrow-right {
+  right: 1rem; /* Posiciona la flecha derecha a la derecha del contenedor */
+}
+
+.circle-indicators {
+  display: flex; /* Usamos flexbox para alinear los indicadores en línea */
+  position: absolute; /* Posición absoluta para que se ubiquen sobre el contenedor */
+  bottom: 1rem; /* Posiciona los indicadores en la parte inferior del contenedor */
+}
+
+.current-indicator {
+  background-color: #ffffff; /* Color de fondo blanco para el indicador activo */
+  height: 15px; /* Altura del indicador */
+  width: 15px; /* Ancho del indicador */
+  border-radius: 50%; /* Hace que el indicador tenga forma de círculo */
+  border: none; /* Sin borde */
+  outline: none; /* Sin contorno */
+  margin: 0 0.2rem; /* Espaciado horizontal entre indicadores */
+  cursor: pointer; /* Cambia el cursor a mano al pasar sobre el indicador */
+}
+
+.hide-current-image {
+  display: none; /* Oculta la imagen actual cuando no está activa */
+}
+
+.inactive-indicator {
+  background-color: gray; /* Color de fondo gris para indicadores inactivos */
+}
