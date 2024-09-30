@@ -2,7 +2,7 @@ import StarRating from './components/StarRating'
 function App() {
 
   return (
-    <StarRating />
+    <StarRating noOfStars={10} />
   )
 }
 
