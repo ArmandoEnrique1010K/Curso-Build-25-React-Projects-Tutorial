@@ -1,4 +1,4 @@
-import Accordian from './components'
+import Accordian from "./components/Accordian"
 
 function App() {
 
