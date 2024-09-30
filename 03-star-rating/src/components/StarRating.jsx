@@ -32,6 +32,8 @@ export default function StarRating({ noOfStars = 5 }) {
     return (
         <div className="star-rating">
             {/* Creamos un arreglo con el número de estrellas y mapeamos sobre él */}
+            {/* El uso del carácter de subrayado (_) en el método map() es una convención común 
+            en JavaScript para indicar que un argumento no se utiliza dentro de la función de mapeo. */}
             {[...Array(noOfStars)].map((_, index) => {
                 // Ajustamos el índice para que comience en 1
                 index += 1;
