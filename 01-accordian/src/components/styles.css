@@ -1,6 +1,6 @@
 /* Contenedor principal del acordeón, que centra el contenido tanto horizontal como verticalmente */
 .acc-wrapper {
-  display: flex; /* Usamos Flexbox para organizar los elementos */
+  display: flex; /* Utiliza Flexbox para organizar los elementos */
   height: 100vh; /* Ocupa toda la altura de la ventana */
   width: 100vw; /* Ocupa todo el ancho de la ventana */
   justify-content: center; /* Centra el contenido horizontalmente */
@@ -28,7 +28,7 @@
 .item {
   background: #614101; /* Fondo marrón oscuro para los ítems */
   margin-bottom: 10px; /* Espacio inferior entre los ítems */
-  padding: 10px 20px; /* Relleno interno de los ítems */
+  padding: 10px 20px; /* Relleno interno de los ítems (arriba y abajo | derecha e izquierda) */
 }
 
 /* Estilo para el título de cada ítem (la pregunta) */

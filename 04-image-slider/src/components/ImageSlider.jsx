@@ -1,9 +1,9 @@
-// Importamos los hooks useEffect y useState de React
+// Importa los hooks useEffect y useState de React
 import { useEffect, useState } from "react";
-// Importamos íconos para las flechas de navegación
+// Importa íconos para las flechas de navegación
 // npm install react-icons --save
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-// Importamos los estilos CSS
+// Importa los estilos CSS
 import "./styles.css";
 
 // Componente ImageSlider que recibe las propiedades url, limit y page
@@ -23,25 +23,27 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
     // Función asíncrona para obtener imágenes desde la API
     async function fetchImages(getUrl) {
         try {
-            // Establecemos el estado de carga a verdadero
+            // Establece el estado de carga a verdadero
             setLoading(true);
 
-            // Realizamos la solicitud fetch a la URL proporcionada
+            // Realiza la solicitud fetch a la URL proporcionada
             const response = await fetch(`${getUrl}?page=${page}&limit=${limit}`);
-            // Convertimos la respuesta a JSON
+
+            // Convierte la respuesta a JSON
             const data = await response.json();
 
             if (data) {
-                // Si hay datos, los almacenamos en el estado images
+                // Si hay datos, se almacena en el estado images
                 setImages(data);
 
-                // Cambiamos el estado de carga a falso
+                // Cambia el estado de carga a falso
                 setLoading(false);
             }
         } catch (e) {
-            // Si hay un error, lo almacenamos en el estado errorMsg
+            // Si hay un error, se almacena en el estado errorMsg
             setErrorMsg(e.message);
-            // Cambiamos el estado de carga a falso
+
+            // Cambia el estado de carga a falso
             setLoading(false);
         }
     }
@@ -64,15 +66,15 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
         if (url !== "") fetchImages(url);
     }, [url]);
 
-    // Imprimimos las imágenes en la consola para depuración
+    // Imprime las imágenes en la consola para depuración
     console.log(images);
 
-    // Si está cargando, mostramos un mensaje de carga
+    // Si está cargando, se muestra un mensaje de carga
     if (loading) {
         return <div>Loading data ! Please wait</div>;
     }
 
-    // Si hay un mensaje de error, lo mostramos
+    // Si hay un mensaje de error, se muestra
     if (errorMsg !== null) {
         return <div>Error occured ! {errorMsg}</div>;
     }

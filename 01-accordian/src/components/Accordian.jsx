@@ -1,7 +1,8 @@
+// Importa el hook useState de React
 import { useState } from "react";
-// Importamos los datos del archivo data.js
+// Importa los datos del archivo data.js
 import data from "./data";
-// Importamos los estilos
+// Importa los estilos
 import "./styles.css";
 
 export default function Accordian() {
@@ -22,23 +23,29 @@ export default function Accordian() {
 
     // Función para manejar la selección múltiple de ítems
     function handleMultiSelection(getCurrentId) {
-        // Hacemos una copia del estado `multiple` para no mutar el estado directamente
+        // Realiza una copia del estado `multiple` para no mutar el estado directamente
         let cpyMutiple = [...multiple];
-        // Buscamos si el id actual ya está en la lista de seleccionados
+        // Busca si el id actual ya está en la lista de seleccionados
+        // El método indexOf de las instancias de Arreglos, devuelve el primer índice en el que se puede encontrar un elemento determinado en el arreglo o "-1" si no está presente.
+        // indexOf(searchElement, fromIndex)
         const findIndexOfCurrentId = cpyMutiple.indexOf(getCurrentId);
 
         console.log(findIndexOfCurrentId);
 
-        // Si el id no está en la lista de seleccionados, lo agregamos
+        // Si el id no está en la lista de seleccionados, se agrega
+        // El método push de las instancias de Arreglos agrega los elementos especificados al final de un arreglo y devuelve la nueva longitud del arreglo.
+        // push(element1, element2, /* …, */ elementN)
         if (findIndexOfCurrentId === -1) cpyMutiple.push(getCurrentId);
-        // Si el id ya está en la lista, lo eliminamos
+        // Si el id ya está en la lista, se elimina
+        // El método splice de las instancias de Arreglos cambia el contenido de un arreglo eliminando o reemplazando elementos existentes y/o agregando nuevos elementos en su lugar.
+        // splice(start, deleteCount, item1, item2, /* …, */ itemN)
         else cpyMutiple.splice(findIndexOfCurrentId, 1);
 
-        // Actualizamos el estado con la nueva lista de seleccionados
+        // Actualiza el estado con la nueva lista de seleccionados
         setMultiple(cpyMutiple);
     }
 
-    // Imprimimos el ítem seleccionado y los múltiples seleccionados para depuración
+    // Imprime el ítem seleccionado y los múltiples seleccionados para depuración
     console.log(selected, multiple);
 
     return (
@@ -55,7 +62,7 @@ export default function Accordian() {
 
             {/* Contenedor del acordeón */}
             <div className="accordian">
-                {/* Si hay datos en el array data, renderizamos los ítems del acordeón */}
+                {/* Si hay datos en el arreglo data, se renderiza los ítems del acordeón */}
                 {data && data.length > 0 ? (
                     data.map((dataItem) => (
                         <div className="item" key={dataItem.id}>
@@ -72,25 +79,25 @@ export default function Accordian() {
                                 }
                                 className="title"
                             >
-                                {/* Renderizamos la pregunta (título) de cada ítem */}
+                                {/* Renderiza la pregunta (título) de cada ítem */}
                                 <h3>{dataItem.question}</h3>
                                 {/* Símbolo de colapsar o expandir */}
                                 <span>+</span>
                             </div>
 
-                            {/* Si la selección múltiple está habilitada y el ítem está seleccionado, mostramos el contenido */}
+                            {/* Si la selección múltiple está habilitada y el ítem está seleccionado, se muestra el contenido */}
                             {enableMultiSelection
                                 ? multiple.indexOf(dataItem.id) !== -1 && (
                                     <div className="acc-content ">{dataItem.answer}</div>
                                 )
-                                // Si la selección única está habilitada y el ítem actual está seleccionado, mostramos el contenido
+                                // Si la selección única está habilitada y el ítem actual está seleccionado, se muestra el contenido
                                 : selected === dataItem.id && (
                                     <div className="acc-content ">{dataItem.answer}</div>
                                 )}
                         </div>
                     ))
                 ) : (
-                    // Si no hay datos, mostramos un mensaje de error
+                    // Si no hay datos, se muestra un mensaje de error
                     <div> No data found !</div>
                 )}
             </div>

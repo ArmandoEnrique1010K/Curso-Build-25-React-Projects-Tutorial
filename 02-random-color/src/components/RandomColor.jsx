@@ -9,6 +9,9 @@ export default function RandomColor() {
 
     // Función auxiliar que genera un número aleatorio basado en la longitud proporcionada
     function randomColorUtility(length) {
+        // El método estático Math.floor siempre redondea hacia abajo y devuelve el número entero más grande menor o igual a un número determinado.
+        // El método estático Math.random devuelve un número pseudoaleatorio de punto flotante que es mayor o igual a 0 y menor que 1, con una distribución aproximadamente uniforme en ese rango, que luego puede escalar al rango deseado. 
+        // La implementación selecciona la semilla inicial para el algoritmo de generación de números aleatorios; el usuario no puede elegirlo ni restablecerlo.
         return Math.floor(Math.random() * length);
     }
 
@@ -23,6 +26,7 @@ export default function RandomColor() {
         // Genera 6 caracteres aleatorios para completar el color HEX
         for (let i = 0; i < 6; i++) {
             // Añade un valor aleatorio del array hex
+            // La propiedad length (longitud de datos) de una instancia de Arreglo representa la cantidad de elementos en ese arreglo. El valor es un entero de 32 bits sin signo que siempre es numéricamente mayor que el índice más alto de la matriz.
             hexColor += hex[randomColorUtility(hex.length)];
         }
 

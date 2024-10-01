@@ -1,6 +1,6 @@
 .container {
   position: relative; /* Posición relativa para que los elementos hijos se posicionen absolutamente respecto a este contenedor */
-  display: flex; /* Usamos flexbox para alinear los elementos dentro del contenedor */
+  display: flex; /* Utiliza flexbox para alinear los elementos dentro del contenedor */
   justify-content: center; /* Centra los elementos horizontalmente */
   align-items: center; /* Centra los elementos verticalmente */
   width: 600px; /* Ancho fijo del slider */
@@ -31,7 +31,7 @@
 }
 
 .circle-indicators {
-  display: flex; /* Usamos flexbox para alinear los indicadores en línea */
+  display: flex; /* Utiliza flexbox para alinear los indicadores en línea */
   position: absolute; /* Posición absoluta para que se ubiquen sobre el contenedor */
   bottom: 1rem; /* Posiciona los indicadores en la parte inferior del contenedor */
 }
