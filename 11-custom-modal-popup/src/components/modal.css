@@ -1,0 +1,65 @@
+.container {
+    text-align: center; /* Alinea el texto en el centro dentro del contenedor */
+    padding-top: 20px; /* Espacio superior para el contenido */
+}
+
+.modal {
+  position: fixed; /* Fija la posición del modal en la ventana del navegador */
+  z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+  padding-top: 150px; /* Espacio superior para el contenido del modal */
+  left: 0; /* Alinea el modal al lado izquierdo */
+  top: 0; /* Alinea el modal a la parte superior */
+  width: 100%; /* Ancho completo del modal */
+  height: 100%; /* Alto completo del modal */
+  overflow: auto; /* Permite el desplazamiento si el contenido es más alto que el modal */
+  background-color: #baf005; /* Color de fondo del modal */
+  text-align: center; /* Alinea el texto en el centro dentro del modal */
+}
+
+.modal-content {
+  position: relative; /* Posición relativa para poder posicionar elementos internos */
+  background-color: #fefefe; /* Color de fondo del contenido del modal */
+  margin: auto; /* Centra el contenido en el modal */
+  padding: 0; /* Sin padding por defecto */
+  border: 1px solid red; /* Borde rojo alrededor del contenido del modal */
+  width: 80%; /* Ancho del contenido del modal */
+  animation-name: animateModal; /* Nombre de la animación */
+  animation-duration: 0.5s; /* Duración de la animación */
+}
+
+.close-modal-icon {
+  cursor: pointer; /* Cambia el cursor al pasar sobre el icono de cerrar */
+  font-size: 40px; /* Tamaño de fuente grande para el icono */
+  float: right; /* Alinea el icono a la derecha */
+  font-weight: bold; /* Hace que el icono sea más grueso */
+}
+
+.header {
+  padding: 4px 16px; /* Espaciado interno en el encabezado */
+  background-color: #5cb85c; /* Color de fondo del encabezado */
+  color: #fff; /* Color del texto en el encabezado */
+}
+
+.body {
+  padding: 2px 16px; /* Espaciado interno en el cuerpo */
+  height: 200px; /* Altura fija para el cuerpo del modal */
+}
+
+.footer {
+  padding: 2px 16px; /* Espaciado interno en el pie */
+  background-color: #5cb85c; /* Color de fondo del pie */
+  color: #fff; /* Color del texto en el pie */
+}
+
+/* Animación para la aparición del modal */
+@keyframes animateModal {
+  from {
+    top: -200px; /* Comienza fuera de la vista por arriba */
+    opacity: 0; /* Comienza con opacidad 0 */
+  }
+
+  to {
+    top: 0; /* Se mueve a la posición superior */
+    opacity: 1; /* Se vuelve completamente visible */
+  }
+}
