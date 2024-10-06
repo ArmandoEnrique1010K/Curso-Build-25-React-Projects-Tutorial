@@ -1,0 +1,40 @@
+/* Estilos generales para el contenedor principal */
+.wrapper {
+  padding: 8px; /* Espaciado alrededor del contenido */
+}
+
+/* Encabezado que contiene las pestañas */
+.heading {
+  display: flex; /* Distribuye las pestañas en una fila */
+  justify-content: center; /* Centra las pestañas horizontalmente */
+  margin-bottom: 12px; /* Espaciado entre las pestañas y el contenido */
+}
+
+/* Estilo para cada pestaña (tab-item) */
+.tab-item {
+  display: inline-flex; /* Mantiene las pestañas alineadas en fila */
+  font-size: 30px; /* Tamaño de fuente grande para las pestañas */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centra el texto dentro de las pestañas */
+  padding: 10px 15px; /* Añade espacio alrededor del texto de las pestañas */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la pestaña */
+  border: none; /* Elimina el borde por defecto */
+  color: #fff; /* Color de texto blanco */
+  background: #4e016a; /* Fondo morado para las pestañas inactivas */
+}
+
+/* Estilo para la pestaña activa (cuando está seleccionada) */
+.tab-item.active {
+  border-color: #000; /* Añade borde negro a la pestaña activa */
+  background: #a1d600; /* Cambia el fondo a verde para la pestaña activa */
+  color: #fff; /* Mantiene el texto en blanco */
+}
+
+/* Contenedor del contenido debajo de las pestañas */
+.content {
+  padding: 20px 10px; /* Espaciado alrededor del contenido */
+  height: 300px; /* Altura fija del contenedor de contenido */
+  overflow: auto; /* Habilita el scroll si el contenido excede la altura */
+  background-color: #fff; /* Fondo blanco para el contenido */
+  text-align: center; /* Centra el contenido textualmente */
+}
