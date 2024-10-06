@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "12-github-profile-finder": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
