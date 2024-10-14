@@ -1,0 +1,19 @@
+.tic-tac-toe-container {
+  display: flex; /* Define un contenedor flex para alinear y distribuir los elementos dentro del contenedor principal */
+  flex-direction: column; /* Dispone los elementos hijos (las filas del tablero) en una sola columna */
+  align-items: center; /* Centra horizontalmente todos los elementos dentro del contenedor */
+  margin-top: 100px; /* Añade un espacio superior para alejar el tablero de la parte superior de la página */
+}
+
+.square {
+  border: 1px solid red; /* Establece un borde rojo de 1 píxel de ancho alrededor de cada celda (cuadro) del tablero */
+  float: left; /* Hace que cada cuadro se alinee a la izquierda, lo cual ayuda a disponer las celdas en filas */
+  font-size: 40px; /* Ajusta el tamaño de la fuente para el texto dentro de las celdas, haciendo que las letras X y O sean grandes y visibles */
+  height: 100px; /* Definen el tamaño de cada celda del tablero */
+  width: 100px;
+  padding: 0px; /* Elimina cualquier espacio de relleno dentro de las celdas */
+  text-align: center; /* Centra el texto (X o O) horizontalmente dentro de cada celda */
+  margin-right: -1px; /* Aseguran que los bordes de las celdas se conecten correctamente para evitar espacios entre ellas */
+  margin-top: -1px;
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre una celda, indicando que es clicable */
+}
