@@ -1,4 +1,4 @@
-// Este archivo contiene un array de objetos llamado `data` que se exporta para ser usado en otros componentes.
+// Este archivo contiene un arreglo de objetos llamado `data` que se exporta para ser usado en otros componentes.
 // Cada objeto representa una pregunta y respuesta para ser utilizada en un acordeón.
 const data = [
   {
@@ -30,5 +30,5 @@ const data = [
   },
 ];
 
-// Exportamos el array `data` para que pueda ser importado en otros componentes de React
+// Exportamos el arreglo `data` para que pueda ser importado en otros componentes de React
 export default data;

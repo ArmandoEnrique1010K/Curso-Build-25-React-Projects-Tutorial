@@ -1,48 +1,92 @@
 /* Contenedor principal del acordeón, que centra el contenido tanto horizontal como verticalmente */
 .acc-wrapper {
-  display: flex; /* Utiliza Flexbox para organizar los elementos */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  width: 100vw; /* Ocupa todo el ancho de la ventana */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  flex-direction: column; /* Coloca los elementos en una columna */
-  gap: 20px; /* Espacio entre los elementos */
+  /* Utiliza Flexbox para organizar los elementos */
+  display: flex;
+
+  /* Ocupa toda la altura de la ventana */
+  height: 100vh;
+
+  /* Ocupa todo el ancho de la ventana */
+  width: 100vw;
+
+  /* Centra el contenido horizontalmente */
+  justify-content: center;
+
+  /* Centra el contenido verticalmente */
+  align-items: center;
+
+  /* Coloca los elementos en una columna */
+  flex-direction: column;
+
+  /* Espacio entre los elementos */
+  gap: 20px;
 }
 
 /* Estilos del botón para habilitar/deshabilitar la selección múltiple */
 .acc-wrapper button {
-  padding: 10px 20px; /* Relleno interno del botón */
-  background: #614101; /* Fondo marrón oscuro */
-  color: #fff; /* Texto blanco */
-  font-weight: bold; /* Negrita para el texto */
-  font-size: 20px; /* Tamaño de fuente */
-  cursor: pointer; /* Cambia el cursor a "puntero" cuando se pasa sobre el botón */
+  /* Relleno interno del botón */
+  padding: 10px 20px;
+
+  /* Fondo marrón oscuro */
+  background: #614101;
+
+  /* Texto blanco */
+  color: #fff;
+
+  /* Negrita para el texto */
+  font-weight: bold;
+
+  /* Tamaño de fuente */
+  font-size: 20px;
+
+  /* Cambia el cursor a "puntero" cuando se pasa sobre el botón */
+  cursor: pointer;
 }
 
 /* Contenedor del acordeón */
 .accordian {
-  width: 500px; /* Ancho fijo del acordeón */
+  /* Ancho fijo del acordeón */
+  width: 500px;
 }
 
 /* Cada ítem individual dentro del acordeón */
 .item {
-  background: #614101; /* Fondo marrón oscuro para los ítems */
-  margin-bottom: 10px; /* Espacio inferior entre los ítems */
-  padding: 10px 20px; /* Relleno interno de los ítems (arriba y abajo | derecha e izquierda) */
+  /* Fondo marrón oscuro para los ítems */
+  background: #614101;
+
+  /* Espacio inferior entre los ítems */
+  margin-bottom: 10px;
+
+  /* Relleno interno de los ítems (arriba y abajo | derecha e izquierda) */
+  padding: 10px 20px;
 }
 
 /* Estilo para el título de cada ítem (la pregunta) */
 .title {
-  color: #ffffff; /* Texto en blanco */
-  display: flex; /* Flexbox para alinear elementos dentro del título */
-  justify-content: space-between; /* Espacio entre el texto del título y el símbolo de expansión */
-  align-items: center; /* Centra verticalmente el contenido */
-  cursor: pointer; /* Cambia el cursor a "puntero" cuando se pasa sobre el título */
+  /* Texto en blanco */
+  color: #ffffff;
+
+  /* Flexbox para alinear elementos dentro del título */
+  display: flex;
+
+  /* Espacio entre el texto del título y el símbolo de expansión */
+  justify-content: space-between;
+
+  /* Centra verticalmente el contenido */
+  align-items: center;
+
+  /* Cambia el cursor a "puntero" cuando se pasa sobre el título */
+  cursor: pointer;
 }
 
 /* Estilo para el contenido de cada ítem (la respuesta) */
 .acc-content {
-  color: #ffffff; /* Texto en blanco */
-  height: auto; /* Altura ajustada automáticamente según el contenido */
-  padding-bottom: 20px; /* Espacio inferior para que el contenido no quede pegado al borde */
+  /* Texto en blanco */
+  color: #ffffff;
+
+  /* Altura ajustada automáticamente según el contenido */
+  height: auto;
+
+  /* Espacio inferior para que el contenido no quede pegado al borde */
+  padding-bottom: 20px;
 }
