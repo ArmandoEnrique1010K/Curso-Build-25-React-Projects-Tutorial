@@ -1,5 +1,5 @@
 {
-  "name": "14-tic-tact-toe",
+  "name": "14-tic-tac-toe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "14-tic-tact-toe": "file:",
+    "14-tic-tac-toe": "file:",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-props": "^0.0.3"
