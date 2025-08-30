@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(184, 253, 253);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.search-engine {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.search-engine input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 2px 15px;
+    font-size: 16px;
+    outline: none;
+    background-color: #ffffff;
+    color: #555555;
+}
+
+.search-engine button {
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 15px;
+}
+
+.search-engine button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.city-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #000;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.temp {
+    font-size: 64px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.description {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.weather-info {
+    border: 1px solid;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+.weather-info th,
+.weather-info td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+.weather-info th {
+    background-color: #71f5df;
+}
+
+.weather-info td.wind {
+    text-align: center;
+}
+
+.weather-info td.humidity {
+    text-align: center;
+}
