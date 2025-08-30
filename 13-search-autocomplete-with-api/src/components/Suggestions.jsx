@@ -1,18 +1,19 @@
-// Componente que renderiza las sugerencias de usuarios basadas en la búsqueda
+import PropTypes from "prop-types";
 export default function Suggestions({ data, handleClick }) {
-    return (
-        <ul>
-            {/* Verifica si hay datos disponibles para mostrar */}
-            {data && data.length
-                ? // Mapea los elementos de los datos filtrados y los renderiza como una lista de elementos
-                data.map((item, index) => (
-                    <li onClick={handleClick} key={index}>
-                        {/* Muestra el nombre del usuario como un elemento de la lista */}
-                        {item}
-                    </li>
-                ))
-                : null // Si no hay datos, no muestra nada
-            }
-        </ul>
-    );
+  return (
+    <ul style={{ width: "max-content", listStyle: "square", fontSize: "16px" }}>
+      {data && data.length
+        ? data.map((item, index) => (
+            <li onClick={handleClick} key={index}>
+              {item}
+            </li>
+          ))
+        : null}
+    </ul>
+  );
 }
+
+Suggestions.propTypes = {
+  data: PropTypes.array,
+  handleClick: PropTypes.func,
+};

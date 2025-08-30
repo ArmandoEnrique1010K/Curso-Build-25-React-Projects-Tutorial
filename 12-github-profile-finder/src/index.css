@@ -38,7 +38,7 @@ code {
 .input-wrapper input {
   padding: 12px;
   font-size: 16px;
-  border: solid 3px #00f4ec;
+  border: solid 3px #09b4af;
   border-radius: 5px;
   width: 300px;
 }
@@ -47,7 +47,7 @@ code {
   padding: 5px 20px;
   border: none;
   border-radius: 8px;
-  background-color: #00f4ec;
+  background-color: #09b4af;
   color: #000;
   cursor: pointer;
   font-size: 16px;
@@ -71,28 +71,32 @@ code {
 
 .name-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 16px;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
   align-items: center;
 }
 
-.name-container p {
-  margin: 0px;
-  font-size: 20px;
-  font-weight: bold;
+table,
+thead,
+tbody,
+th,
+td {
+  border-collapse: collapse;
+  border: 2px solid;
 }
 
-.profile-info div {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 20px;
+.info-label,
+.info-value {
+  text-align: center;
   font-weight: bold;
+  font-size: 16px;
+  padding: 6px 24px;
 }
 
-.profile-info div p {
-  margin-top: 8px;
-  margin-bottom: 12px;
+.info-value a {
+  text-decoration: none;
+  color: #09b4af;
 }

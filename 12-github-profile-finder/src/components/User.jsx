@@ -19,29 +19,45 @@ export default function User({ user }) {
       </div>
 
       <div className="name-container">
-        <a href={`https://github.com/${login}`}>{name || login}</a>
+        <table className="table">
+          <tbody>
+            <tr>
+              <td className="info-label">Username</td>
+              <td className="info-value">
+                {" "}
+                <a href={`https://github.com/${login}`}>{name || login}</a>
+              </td>
+            </tr>
+            <tr>
+              <td className="info-label">User joined on</td>
+              <td className="info-value">
+                {`${createdDate.getDate()} ${createdDate.toLocaleString(
+                  "en-us",
+                  {
+                    month: "short",
+                  }
+                )} ${createdDate.getFullYear()}`}
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <p>
-          User joined on{" "}
-          {`${createdDate.getDate()} ${createdDate.toLocaleString("en-us", {
-            month: "short",
-          })} ${createdDate.getFullYear()}`}
-        </p>
-      </div>
-
-      <div className="profile-info">
-        <div>
-          <p>Public Repos</p>
-          <p>{public_repos}</p>
-        </div>
-        <div>
-          <p>Followers</p>
-          <p>{followers}</p>
-        </div>
-        <div>
-          <p>Following</p>
-          <p>{following}</p>
-        </div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th className="info-label">Public Repos</th>
+              <th className="info-label">Followers</th>
+              <th className="info-label">Following</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="info-value">{public_repos}</td>
+              <td className="info-value">{followers}</td>
+              <td className="info-value">{following}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );

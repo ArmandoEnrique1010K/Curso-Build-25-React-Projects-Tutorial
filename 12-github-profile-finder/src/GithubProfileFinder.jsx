@@ -13,13 +13,19 @@ export default function GithubProfileFinder() {
     const data = await res.json();
 
     if (data) {
+      console.log(data);
+
       setUserData(data);
       setLoading(false);
       setUserName("");
     }
   }
 
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (!userName) return;
+
     fetchGithubUserData();
   }
 
@@ -33,7 +39,7 @@ export default function GithubProfileFinder() {
 
   return (
     <div className="github-profile-container">
-      <div className="input-wrapper">
+      <form onSubmit={handleSubmit} className="input-wrapper">
         <input
           name="search-by-username"
           type="text"
@@ -42,8 +48,8 @@ export default function GithubProfileFinder() {
           onChange={(event) => setUserName(event.target.value)}
         />
 
-        <button onClick={handleSubmit}>Search</button>
-      </div>
+        <button type="submit">Search</button>
+      </form>
 
       {userData !== null ? <User user={userData} /> : null}
     </div>
