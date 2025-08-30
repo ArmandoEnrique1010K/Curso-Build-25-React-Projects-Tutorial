@@ -1,12 +1,7 @@
-// Este archivo contiene un arreglo de objetos llamado `data` que se exporta para ser usado en otros componentes.
-// Cada objeto representa una pregunta y respuesta para ser utilizada en un acordeón.
-const data = [
+export const survey = [
   {
-    // El id es único para cada ítem del acordeón, y es útil para identificar cada sección de manera individual
     id: "1",
-    // Pregunta que se mostrará en el encabezado de cada sección del acordeón
     question: "What are accordion components?",
-    // La respuesta se mostrará dentro del acordeón cuando la sección esté expandida
     answer:
       "Accordion components are user interface elements used for organizing and presenting content in a collapsible manner. They typically consist of a header, content, and an expand/collapse action.",
   },
@@ -29,6 +24,3 @@ const data = [
       "Yes of course, it is very possible to create an accordion component with another framework.",
   },
 ];
-
-// Exportamos el arreglo `data` para que pueda ser importado en otros componentes de React
-export default data;

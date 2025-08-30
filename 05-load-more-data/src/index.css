@@ -7,7 +7,67 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  height: 100vh;
+}
+
+.load-more-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 1040px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .product-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.product {
+  background-color: rgb(245, 245, 218);
+  padding: 20px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+button {
+  margin-bottom: 20px;
+  padding: 10px;
 }

@@ -1,22 +1,8 @@
-/* Estilos predeterminados para las etiquetas <body> y <code> */
 body {
-  /* Elimina los margenes aplicados por defecto*/
   margin: 0;
-
-  /* Define la fuente predeterminada */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-
-  /* Define la suavidad de la fuente */
   -webkit-font-smoothing: antialiased;
-
-  /* Define la suavidad de la fuente en macOS */
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  /* Define la fuente predeterminada */
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

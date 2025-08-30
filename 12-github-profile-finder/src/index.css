@@ -11,3 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 36px;
+}
+
+.github-profile-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-wrapper input {
+  padding: 12px;
+  font-size: 16px;
+  border: solid 3px #00f4ec;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.input-wrapper button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00f4ec;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.user {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.avatar {
+  height: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.name-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.name-container p {
+  margin: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-info div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-info div p {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
